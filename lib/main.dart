@@ -41,7 +41,7 @@ class _AudioRecorderScreenState extends State<AudioRecorderScreen> {
 
   Future<void> startRecording() async {
     final directory = await getApplicationDocumentsDirectory();
-    final path = '${directory.path}/audio_record.wav';
+    final path = '${directory.path}/audio_record3.wav';
     print('MyLog path: ' + path);
     try {
       print('Starting recording...');
@@ -85,7 +85,7 @@ class _AudioRecorderScreenState extends State<AudioRecorderScreen> {
 
             ),
             ElevatedButton(
-              onPressed: _recordingPath != null ? stopRecording : null,
+              onPressed: stopRecording, //_recordingPath != null ? stopRecording : null,
               child: Text('Stop Recording'),
             ),
           ],
